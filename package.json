@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "http-server-spa dist/angular-reddit-clone index.html $PORT",
+    "start": "http-server-spa dist/blog-web-app index.html $PORT",
     "start_dev": "ng serve",
     "start_docker": "ng serve --host 0.0.0.0 --proxy-config proxy-docker.conf.json",
     "build": "ng build",
