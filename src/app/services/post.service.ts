@@ -6,6 +6,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { formatDate } from '@angular/common';
 import { Direction } from '../model/Direction';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -22,19 +23,19 @@ export class PostService {
       categoryId: postFilter.categoryId != null ? postFilter.categoryId.toString() : '',
       userId: postFilter.userId != null ? postFilter.userId.toString() : '',
     };
-    return this.http.get<PostPaged>('blog/posts', {params: param});
+    return this.http.get<PostPaged>(environment.baseUrl + 'api/posts', {params: param});
   }
 
   getPostDetailsById(id: number): Observable<PostDetails> {
-    return this.http.get<PostDetails>('blog/posts/' + id.toString());
+    return this.http.get<PostDetails>(environment.baseUrl + 'api/posts/' + id.toString());
   }
 
   updatePost(post: PostDetails): Observable<PostDetails> {
-    return this.http.put<PostDetails>('blog/posts', post);
+    return this.http.put<PostDetails>(environment.baseUrl + 'api/posts', post);
   }
 
   createPost(post: PostDetails): Observable<PostDetails> {
-    return this.http.post<PostDetails>('blog/posts', post);
+    return this.http.post<PostDetails>(environment.baseUrl + 'api/posts', post);
   }
 
 }

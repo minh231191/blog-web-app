@@ -3,7 +3,9 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --proxy-config proxy.conf.json",
+    "start": "ng serve",
+    "start_dev": "ng serve --proxy-config proxy.conf.json",
+    "start_docker": "ng serve --host 0.0.0.0 --proxy-config proxy-docker.conf.json",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",

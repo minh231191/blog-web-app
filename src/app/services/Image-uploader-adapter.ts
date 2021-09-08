@@ -1,3 +1,5 @@
+import { environment } from "src/environments/environment";
+
 export class ImageUploadAdapter {
 
   loader: any;
@@ -24,7 +26,7 @@ export class ImageUploadAdapter {
 
   _initRequest(): void {
       const xhr = this.xhr = new XMLHttpRequest();
-      xhr.open( 'POST', 'blog/images/upload', true ); // TODO change the URL
+      xhr.open( 'POST', environment.baseUrl + 'api/images/upload', true ); // TODO change the URL
       xhr.responseType = 'json';
       xhr.setRequestHeader('Accept', 'application/json');
   }
