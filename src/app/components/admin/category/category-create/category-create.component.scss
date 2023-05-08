@@ -11,11 +11,10 @@ mat-form-field {
 }
 
 .row {
-  margin: 1rem 0 1rem 0;
+  margin-top: 0.5rem;
 }
 
 .category-container {
-  margin-top: 2rem;
   width: 100%;
 }
 
@@ -25,4 +24,14 @@ mat-form-field {
 
 .active {
   background-color: lightblue;
+}
+
+.container {
+  margin: 1rem 0 1rem 0;
+}
+
+.move-button {
+  margin-top: 1rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
 }

@@ -56,6 +56,7 @@ import { MainAdminComponent } from './components/admin/home/main-admin/main-admi
 import { TagViewComponent } from './components/admin/tag/tag-view/tag-view.component';
 import { TagEditComponent } from './components/admin/tag/tag-edit/tag-edit.component';
 import { TagCreateComponent } from './components/admin/tag/tag-create/tag-create.component';
+import { PostTagComponent } from './components/post/post-tag/post-tag.component';
 
 @NgModule({
   declarations: [
@@ -88,7 +89,8 @@ import { TagCreateComponent } from './components/admin/tag/tag-create/tag-create
     LoginComponent,
     TagViewComponent,
     TagEditComponent,
-    TagCreateComponent
+    TagCreateComponent,
+    PostTagComponent
   ],
   imports: [
     BrowserModule,

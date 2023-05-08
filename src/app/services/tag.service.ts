@@ -9,7 +9,17 @@ import { TagDisplay } from '../model/TagDisplay';
 })
 export class TagService {
 
+  selectedTag!: TagDisplay;
+
   constructor(private http: HttpClient) { }
+
+  getSelectedTag(): TagDisplay {
+    return this.selectedTag;
+  }
+
+  setSelectedTag(tag: TagDisplay): void {
+    this.selectedTag = tag;
+  }
 
   getAllDisplayTags(): Observable<TagDisplay[]> {
     return this.http.get<TagDisplay[]>(environment.baseUrl + 'api/tags');

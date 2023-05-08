@@ -27,7 +27,7 @@ export class CategoryAdminComponent implements OnInit {
   openViewCategory(id: number): void {
     this.dialog.open(CategoryViewComponent, {
       width: '800px',
-      height: '800px',
+      height: '700px',
       data: {id}
     });
   }
@@ -35,7 +35,7 @@ export class CategoryAdminComponent implements OnInit {
   openEditCategory(id: number): void {
     this.dialog.open(CategoryEditComponent, {
       width: '800px',
-      height: '800px',
+      height: '700px',
       data: {id}
     });
   }
@@ -43,7 +43,7 @@ export class CategoryAdminComponent implements OnInit {
   openCreateCategory(): void {
     this.dialog.open(CategoryCreateComponent, {
       width: '800px',
-      height: '800px',
+      height: '700px',
       data: {}
     });
   }

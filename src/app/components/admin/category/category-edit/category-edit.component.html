@@ -1,7 +1,7 @@
 <div class="container" fxLayout fxLayoutAlign="start">
   <form [formGroup]="categoryForm" (ngSubmit)="save()" id="category-form" class="category-form" >
     <div fxLayout="row" class="row">
-      <div fxFlex=12% class="label"><b>Name:</b></div>
+      <div fxFlex=15% class="label"><b>Name:</b></div>
       <div fxFlex=80%>
         <mat-form-field appearance="outline">
           <input matInput formControlName="name">
@@ -9,7 +9,7 @@
       </div>
     </div>
     <div fxLayout="row" class="row">
-      <div fxFlex=12% class="label"><b>Description:</b></div>
+      <div fxFlex=15% class="label"><b>Description:</b></div>
       <div fxFlex=80%>
         <mat-form-field appearance="outline">
             <textarea matInput formControlName="description"></textarea>
@@ -17,7 +17,7 @@
       </div>
     </div>
     <div fxLayout="row" class="row">
-      <div fxFlex=12% class="label"><b>Status:</b></div>
+      <div fxFlex=15% class="label"><b>Status:</b></div>
       <div fxFlex=80%>
         <mat-form-field appearance="outline">
           <mat-select formControlName="status">
@@ -29,20 +29,24 @@
       </div>
     </div>
     <div fxLayout="row" class="row">
-      <div fxFlex=12%><b>Created By:</b></div>
+      <div fxFlex=15%><b>Created By:</b></div>
       <div fxFlex=80%>{{ category.createdBy }}</div>
     </div>
     <div fxLayout="row" class="row">
-      <div fxFlex=12% ><b>Created Date:</b></div>
+      <div fxFlex=15% ><b>Created Date:</b></div>
       <div fxFlex=80%>{{ category.createdDate }}</div>
     </div>
   </form>
 </div>
 <mat-divider></mat-divider>
-<div class="container" fxLayout fxLayoutAlign="start">
-  <div fxLayout="row" class="category-container">
+<div class="container" fxLayout="column" fxLayoutAlign="start">
+  <div fxLayout="row">
+    <div fxFlex=40%><label><b>Available Categories</b></label></div>
+    <div fxFlex=20%></div>
+    <div fxFlex=40%><label><b>Sub Categories</b></label></div>
+  </div>
+  <div fxLayout="row" class="category-container row">
     <div fxFlex=40% class="category-list">
-      <label>Available Categories</label>
       <mat-list>
         <mat-list-item
           *ngFor=" let category of availableElements"
@@ -52,11 +56,10 @@
        </mat-list>
     </div>
     <div fxFlex=20%>
-      <div fxLayout="row"><button fxFlex=100% mat-button (click)="moveToTheLeft()">&lt;&lt;</button></div>
-      <div fxLayout="row"><button fxFlex=100% mat-button (click)="moveToTheRight()">&gt;&gt;</button></div>
+      <div fxLayout="row"><button fxFlex=100% mat-stroked-button class="move-button" (click)="moveToTheLeft()">&lt;&lt;</button></div>
+      <div fxLayout="row"><button fxFlex=100% mat-stroked-button class="move-button" (click)="moveToTheRight()">&gt;&gt;</button></div>
     </div>
     <div fxFlex=40%  class="category-list">
-      <label>Sub Categories</label>
       <mat-list>
         <mat-list-item
           *ngFor=" let category of addedElements"
@@ -67,4 +70,4 @@
     </div>
   </div>
 </div>
-<button mat-button type="submit" form="category-form">Save</button>
+<button mat-raised-button color="primary" type="submit" form="category-form">Save</button>

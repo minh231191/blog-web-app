@@ -76,6 +76,7 @@ export class PostEditComponent extends ListTransfer<TagDisplay> implements OnIni
     this.currentPost.subtitle = this.postForm.get('subtitle')?.value;
     this.currentPost.tags = this.addedElements;
     this.currentPost.content = this.ckEditor.getData();
+    this.currentPost.categoryId = this.postForm.get('category')?.value;
     this.postService.updatePost(this.currentPost).subscribe(
       success => {
         this.router.navigate(['/admin/posts']);

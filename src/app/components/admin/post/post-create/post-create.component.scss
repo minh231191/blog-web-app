@@ -6,10 +6,32 @@ mat-form-field {
   width: 80%;
 }
 
+mat-form-field.option {
+  width: 20%;
+}
+
+.label {
+  margin-top: 1.5rem;
+}
+
 .active {
   background-color: lightblue;
 }
 
+.container {
+  margin: 1rem;
+}
+
+.move-button {
+  margin-top: 1rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
 .tag-list {
-  border: 1px solid grey
+  border: 1px solid lightgrey;
+}
+
+.row {
+  margin-top: 0.5rem;
 }

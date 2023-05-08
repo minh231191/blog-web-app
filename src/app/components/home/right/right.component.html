@@ -1,1 +1,8 @@
-<p>Right Content</p>
+<div class="right-menu">
+  <h2>Tag:</h2>
+  <mat-list>
+    <ng-container *ngFor="let tag of tags">
+      <mat-list-item (click)="navigateToTagPost(tag)">{{ tag.name }}</mat-list-item>
+    </ng-container>
+  </mat-list>
+</div>

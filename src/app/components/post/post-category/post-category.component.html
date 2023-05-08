@@ -1,5 +1,5 @@
-<h2 *ngIf="selectedCategory != null">{{ selectedCategory.name }}</h2>
-<mat-spinner *ngIf="posts.length === 0"></mat-spinner>
+<h2 *ngIf="selectedCategory != null">Category: {{ selectedCategory.name }}</h2>
+<mat-spinner *ngIf="posts !== null && posts.length === 0"></mat-spinner>
 <div *ngFor="let post of posts" class="post">
   <mat-card >
     <mat-card-header>
@@ -18,7 +18,7 @@
   </mat-card>
 </div>
 
-<div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="center">
+<div fxLayout="row" *ngIf="posts !== null && posts.length !== 0" fxLayout.xs="column" fxLayoutAlign="center">
   <div fxFlex="20">
   </div>
   <div fxFlex="10" *ngIf="!isFirstPage">

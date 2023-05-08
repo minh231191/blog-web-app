@@ -22,6 +22,7 @@ export class PostService {
       direction: direction.toString(),
       categoryId: postFilter.categoryId != null ? postFilter.categoryId.toString() : '',
       userId: postFilter.userId != null ? postFilter.userId.toString() : '',
+      tagId: postFilter.tagId != null ? postFilter.tagId.toString() : '',
     };
     return this.http.get<PostPaged>(environment.baseUrl + 'api/posts', {params: param});
   }

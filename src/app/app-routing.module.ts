@@ -1,3 +1,4 @@
+import { PostTagComponent } from './components/post/post-tag/post-tag.component';
 import { RegisterComponent } from './components/user/register/register.component';
 import { CkeditorComponent } from './components/ckeditor/ckeditor.component';
 import { UserAdminComponent } from './components/admin/user/user-admin/user-admin.component';
@@ -32,6 +33,10 @@ const routes: Routes = [
       {
         path: 'category/:categoryName',
         component: PostCategoryComponent
+      },
+      {
+        path: 'tag/:tagName',
+        component: PostTagComponent
       },
       {
         path: 'posts/:postId',

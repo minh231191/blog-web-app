@@ -1,3 +1,4 @@
+<h2 *ngIf="selectedTag != null">Tag: {{ selectedTag.name }}</h2>
 <mat-spinner *ngIf="posts !== null && posts.length === 0"></mat-spinner>
 <div *ngFor="let post of posts" class="post">
   <mat-card >
@@ -8,12 +9,16 @@
       <mat-card-subtitle>{{ post.categoryName }}</mat-card-subtitle>
     </mat-card-header>
     <mat-card-content>
-      <p>{{post.subtitle}}</p>
+      <p>
+        The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+        A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+        bred for hunting.
+      </p>
     </mat-card-content>
   </mat-card>
 </div>
 
-<div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="center">
+<div fxLayout="row" *ngIf="posts !== null && posts.length !== 0" fxLayout.xs="column" fxLayoutAlign="center">
   <div fxFlex="20">
   </div>
   <div fxFlex="10" *ngIf="!isFirstPage">

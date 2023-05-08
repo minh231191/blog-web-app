@@ -1,6 +1,10 @@
-<h2>{{ currentPost.title }}</h2>
-<p>At: {{ currentPost.createdDate }}</p>
-<p>Author: {{ currentPost.author }}</p>
-<p>Category: {{ currentPost.categoryName }}</p>
-<h3>{{ currentPost.subtitle }}</h3>
-<div [innerHTML]="currentPost.content | highlightCode"></div>
+<div class="container">
+  <h2>{{ currentPost.title }}</h2>
+  <p>At: {{ currentPost.createdDate }}</p>
+  <p>Author: {{ currentPost.author }}</p>
+  <p>Category: {{ currentPost.categoryName }}</p>
+  <h3>{{ currentPost.subtitle }}</h3>
+  <hr>
+  <div [innerHTML]="currentPost.content | highlightCode"></div>
+</div>
+
